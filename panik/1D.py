@@ -5,41 +5,13 @@ from scipy.optimize import minimize
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel, Matern
 import time
-from itertools import product
-from mpl_toolkits.mplot3d import Axes3D
 
 start_time=time.time()
 
-"""
--------------
-MUUUTUJAAD
-------------
-"""
-#muutujad
-n_iter=100
-xi=0.4
-n_restarts=25
-mituAlgpunkti=10
-bounds = np.array([[-2.0, 2.0],[-2.0,2.0]])
-
-
 #kirjuta funktsioon mida lahendad
-def f(x, a=1,b=100):
-	funktsioon=np.zeros(len(x))
-	for i in range(len(x)):
-		funktsioon[i]=(a-x[i,0])**2+b*(x[i,1]-x[i,0]**2)**2
-	return funktsioon.reshape(-1,1)
+def f(X, noise=0.1):
+    return X**2*np.sin(5*np.pi*X/3)**6 + noise * np.random.randn(*X.shape)
 
-#algolukorra loomine
-def algolukord(mituAlgpunkti):
-	algpunktid = np.random.uniform(bounds[0,0], bounds[0,1],[mituAlgpunkti,2])
-	return algpunktid
-
-X_sample=algolukord(mituAlgpunkti)
-Y_sample=f(X_sample)
-
-#Mis mudel ja Kernel
-gpr = GaussianProcessRegressor()
 
 
 #EI arvutamine
@@ -60,13 +32,12 @@ def expected_improvement(X, X_sample, Y_sample, gpr, xi=0.01):
     '''
     mu, sigma = gpr.predict(X, return_std=True)
     mu_sample = gpr.predict(X_sample)
-    
-    sigma = sigma.reshape(-1, 1) + 0.0000000001
-    
+
+    sigma = sigma.reshape(-1, 1)
     # Needed for noise-based model,
     # otherwise use np.max(Y_sample).
     # See also section 2.4 in [...]
-    mu_sample_opt = np.min(mu_sample)
+    mu_sample_opt = np.max(mu_sample)
 
     with np.errstate(divide='warn'):
         imp = mu - mu_sample_opt - xi
@@ -77,8 +48,7 @@ def expected_improvement(X, X_sample, Y_sample, gpr, xi=0.01):
     return ei
 
 #positsiooni arvutamine
-
-def propose_location(acquisition, X_sample, Y_sample, gpr, boundss, n_restarts):
+def propose_location(acquisition, X_sample, Y_sample, gpr, bounds, n_restarts):
     '''
     Proposes the next sampling point by optimizing the acquisition function.
     
@@ -97,19 +67,40 @@ def propose_location(acquisition, X_sample, Y_sample, gpr, boundss, n_restarts):
     
     def min_obj(X):
         # Minimization objective is the negative acquisition function
-        return acquisition(X.reshape(-1, dim), X_sample, Y_sample, gpr ,xi)
+        return -acquisition(X.reshape(-1, dim), X_sample, Y_sample, gpr ,xi)
     
-    # Find the best optimum by starting from n_restarts different random points
-    randomPoints=np.random.uniform(bounds[0,0], bounds[0,1], size=(n_restarts, dim))
-
-    for x0 in randomPoints:
-        res = minimize(min_obj, x0=x0, method='L-BFGS-B')        
+    # Find the best optimum by starting from n_restarts different random points.
+    for x0 in np.random.uniform(bounds[:, 0], bounds[:, 1], size=(n_restarts, dim)):
+        res = minimize(min_obj, x0=x0, bounds=bounds, method='L-BFGS-B')  
+        print(res)      
         if res.fun < min_val:
             min_val = res.fun[0]
             min_x = res.x           
             
-    return min_x.reshape(1,2)
+    return min_x.reshape(-1, 1)
 
+#VARIABLES
+"""
+-------------
+MUUUTUJAAD
+------------
+"""
+#muutujad
+n_iter=50
+xi=0.1
+n_restarts=25
+mitu_algpunkti=3
+noise=0.1
+bounds = np.array([[-1.0, 2.0]])
+
+#algolukorra loomine
+
+X_sample=np.random.uniform(bounds[:,0], bounds[:,1],mitu_algpunkti).reshape(-1,1)
+Y_sample=f(X_sample,noise)
+
+#mudeli paika panemine
+m52 = ConstantKernel(1.0) * Matern(length_scale=1.0, nu=2.5)
+gpr = GaussianProcessRegressor(kernel=m52, alpha=noise**2)
 
 for i in range(n_iter):
 #while (np.max(f(np.linspace(bounds[:, 0], bounds[:, 1], 1000),0))-np.max(Y_sample)) > 0.0003:
@@ -120,15 +111,28 @@ for i in range(n_iter):
     X_next = propose_location(expected_improvement, X_sample, Y_sample, gpr, bounds, n_restarts)
     
     # Obtain next noisy sample from the objective function
-    Y_next = f(X_next)
+    Y_next = f(X_next, noise)
     
     # Add sample to previous samples
     X_sample = np.vstack((X_sample, X_next))
     Y_sample = np.vstack((Y_sample, Y_next))
 
-index=np.argmin(Y_sample)
-print(Y_sample[index])
-print(X_sample[index])
-print(np.shape(X_sample))
 
+#OUTPUT
 print("Ending time: " + str(time.time()-start_time))
+
+
+a=np.max(Y_sample)
+b=None
+
+for i in range(len(Y_sample)):
+	if Y_sample[i]==a:
+		b=X_sample[i]
+
+print(len(X_sample))
+print(b)
+
+
+plt.scatter(X_sample,Y_sample, s=12, c='r')
+plt.scatter(np.linspace(bounds[:, 0], bounds[:, 1], 1000), f(np.linspace(bounds[:, 0], bounds[:, 1], 1000),0), s=3)
+plt.show()
