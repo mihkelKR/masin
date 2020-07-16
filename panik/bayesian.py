@@ -1,134 +1,163 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-from scipy.optimize import minimize
 from sklearn.gaussian_process import GaussianProcessRegressor
-from sklearn.gaussian_process.kernels import ConstantKernel, Matern
+from sklearn.gaussian_process.kernels import ConstantKernel as C, Matern, RBF
 import time
-from itertools import product
-from mpl_toolkits.mplot3d import Axes3D
 
 start_time=time.time()
 
 """
 -------------
-MUUUTUJAAD
+Hyperhyperparameetrid
 ------------
 """
-#muutujad
-n_iter=100
-xi=0.4
-n_restarts=25
-mituAlgpunkti=10
-bounds = np.array([[-2.0, 2.0],[-2.0,2.0]])
+n_iterations=200
+exploration=0.3
+samplePoints=500
+no_startingPoints=10
+bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
 
 
-#kirjuta funktsioon mida lahendad
-def f(x, a=1,b=100):
-	funktsioon=np.zeros(len(x))
-	for i in range(len(x)):
-		funktsioon[i]=(a-x[i,0])**2+b*(x[i,1]-x[i,0]**2)**2
-	return funktsioon.reshape(-1,1)
+#kirjuta funktsioon mida hakata optimiseerima
+#Sisesta 2D XY array. 
+def f(XY, a=1,b=100):
+    x=XY[:,0]
+    y=XY[:,1]
+    Z=(a-x)**2+b*(y-x**2)**2
+    return Z.reshape(-1,1)
 
-#algolukorra loomine
-def algolukord(mituAlgpunkti):
-	algpunktid = np.random.uniform(bounds[0,0], bounds[0,1],[mituAlgpunkti,2])
-	return algpunktid
+#algpunktide genereerimine
 
-X_sample=algolukord(mituAlgpunkti)
-Y_sample=f(X_sample)
+XY=np.random.uniform(bounds[0,0], bounds[0,1],[no_startingPoints,2])
+Z=f(XY)
+
 
 #Mis mudel ja Kernel
-gpr = GaussianProcessRegressor()
+customKernel=C(1.0) * Matern()
+model = GaussianProcessRegressor(kernel=customKernel)
 
 
-#EI arvutamine
-def expected_improvement(X, X_sample, Y_sample, gpr, xi=0.01):
+#Expected improvementi arvutamine
+
+def expected_improvement(sample, XY, Z, model, exploration):
     '''
-    Computes the EI at points X based on existing samples X_sample
-    and Y_sample using a Gaussian process surrogate model.
+    Computes the EI at points X based on existing samples XY
+    and Z using a Gaussian process surrogate model.
     
     Args:
-        X: Points at which EI shall be computed (m x d).
-        X_sample: Sample locations (n x d).
-        Y_sample: Sample values (n x 1).
-        gpr: A GaussianProcessRegressor fitted to samples.
-        xi: Exploitation-exploration trade-off parameter.
+        sample: Points at which EI shall be computed (m x d).
+        XY: Sample locations (n x d).
+        Z: Sample values (n x 1).
+        model: A GaussianProcessRegressor fitted to samples.
+        exlporation: Exploitation-exploration trade-off parameter.
     
     Returns:
-        Expected improvements at points X.
+        Expected improvements at points "sample".
     '''
-    mu, sigma = gpr.predict(X, return_std=True)
-    mu_sample = gpr.predict(X_sample)
-    
+    mu, sigma = model.predict(sample, return_std=True)
+    mu_sample = model.predict(XY)
+   
+    #reshapin sigma ja liidan vaikese arvu, et edasistes arvutustes ei oleks 0-ga jagamist
     sigma = sigma.reshape(-1, 1) + 0.0000000001
-    
-    # Needed for noise-based model,
-    # otherwise use np.max(Y_sample).
-    # See also section 2.4 in [...]
     mu_sample_opt = np.min(mu_sample)
 
     with np.errstate(divide='warn'):
-        imp = mu - mu_sample_opt - xi
-        Z = imp / sigma
+            imp = mu - mu_sample_opt - exploration
+            Z = imp / sigma
+
+    if sigma[0,0]>1:
+
+        if Z<0:
+            Z=Z*(-1)
+
+        return Z
+
+    else:
         ei = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
-        ei[sigma == 0.0] = 0.0
+        #ei[sigma == 0.0] = 0.0
+        return ei 
     
-    return ei
+    
 
 #positsiooni arvutamine
 
-def propose_location(acquisition, X_sample, Y_sample, gpr, boundss, n_restarts):
+def propose_location(acquisition, XY, Z, model, boundss, samplePoints):
     '''
     Proposes the next sampling point by optimizing the acquisition function.
     
     Args:
         acquisition: Acquisition function.
-        X_sample: Sample locations (n x d).
-        Y_sample: Sample values (n x 1).
-        gpr: A GaussianProcessRegressor fitted to samples.
+        XY: Sample locations (n x d).
+        Z: Sample values (n x 1).
+        model: A GaussianProcessRegressor fitted to samples.
 
     Returns:
         Location of the acquisition function maximum.
     '''
-    dim = X_sample.shape[1]
-    min_val = 1
+    dimensions = XY.shape[1]
+    min_val = 10000000
     min_x = None
-    
-    def min_obj(X):
-        # Minimization objective is the negative acquisition function
-        return acquisition(X.reshape(-1, dim), X_sample, Y_sample, gpr ,xi)
-    
-    # Find the best optimum by starting from n_restarts different random points
-    randomPoints=np.random.uniform(bounds[0,0], bounds[0,1], size=(n_restarts, dim))
+
+    # Find the best optimum by starting from samplePoints different random points
+    randomPoints=np.random.uniform(boundss[0,0], boundss[0,1], size=(samplePoints, dimensions))
 
     for x0 in randomPoints:
-        res = minimize(min_obj, x0=x0, method='L-BFGS-B')        
-        if res.fun < min_val:
-            min_val = res.fun[0]
-            min_x = res.x           
-            
+        EI=acquisition(x0.reshape(-1, dimensions), XY, Z, model ,exploration)
+        if EI < min_val:
+            min_val=EI
+            min_x=x0
+                
     return min_x.reshape(1,2)
 
 
-for i in range(n_iter):
-#while (np.max(f(np.linspace(bounds[:, 0], bounds[:, 1], 1000),0))-np.max(Y_sample)) > 0.0003:
+
+for i in range(n_iterations):
+    #print iteration
+    print("Iteration " + str(i) + "/"+str(n_iterations))
+
     # Update Gaussian process with existing samples
-    gpr.fit(X_sample, Y_sample)
+    model.fit(XY, Z)
 
     # Obtain next sampling point from the acquisition function (expected_improvement)
-    X_next = propose_location(expected_improvement, X_sample, Y_sample, gpr, bounds, n_restarts)
+    XY_next = propose_location(expected_improvement, XY, Z, model, bounds, samplePoints)
     
     # Obtain next noisy sample from the objective function
-    Y_next = f(X_next)
+    Z_next = f(XY_next)
     
     # Add sample to previous samples
-    X_sample = np.vstack((X_sample, X_next))
-    Y_sample = np.vstack((Y_sample, Y_next))
+    XY = np.vstack((XY, XY_next))
+    Z = np.vstack((Z, Z_next))
 
-index=np.argmin(Y_sample)
-print(Y_sample[index])
-print(X_sample[index])
-print(np.shape(X_sample))
+    """
+    #Generate plot of surrogate function
+    X_axis=np.linspace(bounds[0,0],bounds[0,1],1000)
+    Y_axis=np.linspace(bounds[0,0],bounds[0,1],1000)
+    XY=np.linspace((bounds[0,0],bounds[0,0]),(bounds[0,1],bounds[0,1]),1000)
+    X,Y=np.meshgrid(X_axis,Y_axis)
+    Z=model.predict(XY)
+    ax = plt.axes(projection='3d')
+    ax.plot_surface(X, Y, Z)
+    plt.show()
+    """
 
+"""
+------
+OUTPUT
+------
+
+"""
+#kui kaua l2ks aega
 print("Ending time: " + str(time.time()-start_time))
+
+#lopp-punktid
+index=np.argmin(Z)
+print("Function value: "+ str(Z[index]))
+print("Position: " + str(XY[index]))
+
+#graafik proovitud punktidest
+X_axis=XY[no_startingPoints:,0]
+Y_axis=XY[no_startingPoints:,1]
+ax = plt.axes(projection='3d')
+ax.scatter(X_axis, Y_axis, Z[no_startingPoints:], cmap='viridis', linewidth=0.5)
+plt.show()

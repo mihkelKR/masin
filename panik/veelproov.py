@@ -12,9 +12,9 @@ start_time=time.time()
 Hyperhyperparameetrid
 ------------
 """
-n_iterations=100
-exploration=80
-samplePoints=1000
+n_iterations=300
+exploration=70
+samplePoints=500
 no_startingPoints=10
 bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
 

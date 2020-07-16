@@ -1,0 +1,6 @@
+0.9957603041104193 1.0206524002940114
+n_iterations: 242
+exploration: 97
+samplePoints: 984
+no_startingPoints: 79
+
