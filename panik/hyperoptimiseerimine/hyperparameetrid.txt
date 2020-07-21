@@ -1,0 +1,1446 @@
+Min: [0.7158579]Pos: [0.2490473  0.02304662]Time: 137.6181321144104
+n_iterations: 146
+exploration: 14
+samplePoints: 402
+no_startingPoints: 88
+
+Min: [0.8400476]Pos: [1.65578529 2.80565563]Time: 34.09940218925476
+n_iterations: 66
+exploration: 78
+samplePoints: 948
+no_startingPoints: 19
+
+Min: [174.36492118]Pos: [ 9.01257154 80.17685713]Time: 88.66386198997498
+n_iterations: 80
+exploration: 0
+samplePoints: 913
+no_startingPoints: 68
+
+Min: [39.79220934]Pos: [-1.49848021  2.82466487]Time: 143.00542092323303
+n_iterations: 116
+exploration: 13
+samplePoints: 684
+no_startingPoints: 83
+
+Min: [2.80200942]Pos: [2.6731923  7.15089362]Time: 237.95035552978516
+n_iterations: 256
+exploration: 97
+samplePoints: 399
+no_startingPoints: 20
+
+Min: [5.25312057]Pos: [ 3.25482708 10.63499379]Time: 372.9683108329773
+n_iterations: 289
+exploration: 79
+samplePoints: 247
+no_startingPoints: 89
+
+Min: [15.36088437]Pos: [ 4.55039648 20.54010902]Time: 545.0738866329193
+n_iterations: 232
+exploration: 16
+samplePoints: 760
+no_startingPoints: 86
+
+Min: [34.09094087]Pos: [-4.69276055 21.89225499]Time: 95.9273133277893
+n_iterations: 104
+exploration: 46
+samplePoints: 606
+no_startingPoints: 73
+
+Min: [2.01238145]Pos: [2.07838906 4.22753501]Time: 444.916463136673
+n_iterations: 224
+exploration: 7
+samplePoints: 591
+no_startingPoints: 97
+
+Min: [40.31542492]Pos: [ 7.3188609  53.50348158]Time: 82.26997756958008
+n_iterations: 144
+exploration: 39
+samplePoints: 310
+no_startingPoints: 59
+
+Min: [64.12821525]Pos: [ 8.60967964 73.87716434]Time: 65.56195783615112
+n_iterations: 103
+exploration: 31
+samplePoints: 488
+no_startingPoints: 54
+
+Min: [2194.17897365]Pos: [-10.07390672  96.93217102]Time: 30.917840480804443
+n_iterations: 69
+exploration: 14
+samplePoints: 836
+no_startingPoints: 19
+
+Min: [114.04958034]Pos: [-7.35459123 54.75522173]Time: 41.11469650268555
+n_iterations: 84
+exploration: 33
+samplePoints: 428
+no_startingPoints: 51
+
+Min: [45.8288014]Pos: [-2.02594214  3.49886353]Time: 111.6874532699585
+n_iterations: 144
+exploration: 82
+samplePoints: 417
+no_startingPoints: 65
+
+Min: [6.8688524]Pos: [-1.15047497  1.47340286]Time: 339.14884781837463
+n_iterations: 180
+exploration: 37
+samplePoints: 996
+no_startingPoints: 58
+
+Min: [18.78159273]Pos: [2.59600144 6.33630449]Time: 289.50330424308777
+n_iterations: 221
+exploration: 74
+samplePoints: 523
+no_startingPoints: 65
+
+Min: [31.99297208]Pos: [ 5.65930029 32.34836482]Time: 27.42620038986206
+n_iterations: 60
+exploration: 33
+samplePoints: 563
+no_startingPoints: 48
+
+Min: [3.8413982]Pos: [-0.18636184  0.19074175]Time: 356.24635910987854
+n_iterations: 268
+exploration: 83
+samplePoints: 599
+no_startingPoints: 24
+
+Min: [63.36655595]Pos: [-6.52411038 42.30412557]Time: 90.29627823829651
+n_iterations: 83
+exploration: 20
+samplePoints: 592
+no_startingPoints: 97
+
+Min: [31.51796573]Pos: [-1.28853702  2.17297337]Time: 706.4045894145966
+n_iterations: 249
+exploration: 30
+samplePoints: 843
+no_startingPoints: 86
+
+Min: [109.43872423]Pos: [ 3.61862533 12.08162386]Time: 45.912790298461914
+n_iterations: 81
+exploration: 29
+samplePoints: 533
+no_startingPoints: 51
+
+Min: [16.25371934]Pos: [0.06550115 0.39646933]Time: 136.46320390701294
+n_iterations: 113
+exploration: 30
+samplePoints: 721
+no_startingPoints: 78
+
+Min: [582.78241101]Pos: [ 6.72195426 42.83937244]Time: 26.26189351081848
+n_iterations: 57
+exploration: 94
+samplePoints: 429
+no_startingPoints: 62
+
+Min: [125.28163847]Pos: [-7.54740469 56.2406592 ]Time: 52.01374292373657
+n_iterations: 89
+exploration: 3
+samplePoints: 302
+no_startingPoints: 89
+
+Min: [73.51613861]Pos: [-6.93342282 47.74712988]Time: 225.41236472129822
+n_iterations: 244
+exploration: 2
+samplePoints: 255
+no_startingPoints: 87
+
+Min: [631.173548]Pos: [ 9.33263146 89.46811706]Time: 73.25212740898132
+n_iterations: 83
+exploration: 60
+samplePoints: 509
+no_startingPoints: 91
+
+Min: [14.36737424]Pos: [-2.45135486  6.16584178]Time: 138.91436743736267
+n_iterations: 197
+exploration: 6
+samplePoints: 325
+no_startingPoints: 52
+
+Min: [6.69500733]Pos: [ 3.18624344 10.01375119]Time: 217.37461757659912
+n_iterations: 237
+exploration: 38
+samplePoints: 427
+no_startingPoints: 27
+
+Min: [45.01854561]Pos: [ 7.09201618 50.5778675 ]Time: 509.3939275741577
+n_iterations: 289
+exploration: 40
+samplePoints: 571
+no_startingPoints: 47
+
+Min: [57.76999653]Pos: [ 6.74009434 45.92708165]Time: 257.364275932312
+n_iterations: 156
+exploration: 0
+samplePoints: 796
+no_startingPoints: 80
+
+Min: [261.66169888]Pos: [-4.67830975 20.37192544]Time: 113.89426350593567
+n_iterations: 96
+exploration: 89
+samplePoints: 723
+no_startingPoints: 84
+
+Min: [57.87599127]Pos: [-6.47147367 42.02325692]Time: 940.8948724269867
+n_iterations: 293
+exploration: 91
+samplePoints: 839
+no_startingPoints: 74
+
+Min: [691.35403182]Pos: [-9.84639665 99.34675087]Time: 50.145689487457275
+n_iterations: 79
+exploration: 7
+samplePoints: 705
+no_startingPoints: 40
+
+Min: [28.61215231]Pos: [-4.01875228 16.33541796]Time: 229.90823411941528
+n_iterations: 168
+exploration: 73
+samplePoints: 642
+no_startingPoints: 73
+
+Min: [164.89219253]Pos: [-7.18157082 52.56467708]Time: 88.98895215988159
+n_iterations: 206
+exploration: 55
+samplePoints: 241
+no_startingPoints: 13
+
+Min: [17.27564022]Pos: [ 0.44162831 -0.21683652]Time: 162.30811762809753
+n_iterations: 150
+exploration: 92
+samplePoints: 492
+no_startingPoints: 83
+
+Min: [107.12568081]Pos: [ 9.01149284 81.86230207]Time: 209.57104659080505
+n_iterations: 198
+exploration: 19
+samplePoints: 638
+no_startingPoints: 29
+
+Min: [1.5238077]Pos: [2.2010442  4.87310884]Time: 209.20042991638184
+n_iterations: 278
+exploration: 69
+samplePoints: 221
+no_startingPoints: 55
+
+Min: [80.88725315]Pos: [ 5.4924336  29.38769085]Time: 85.46777534484863
+n_iterations: 113
+exploration: 88
+samplePoints: 757
+no_startingPoints: 31
+
+Min: [116.93235789]Pos: [-4.98296451 23.92917734]Time: 191.67556405067444
+n_iterations: 106
+exploration: 87
+samplePoints: 971
+no_startingPoints: 93
+
+Min: [27.73165618]Pos: [0.5979327  0.88259491]Time: 390.1941432952881
+n_iterations: 224
+exploration: 21
+samplePoints: 806
+no_startingPoints: 48
+
+Min: [89.23119615]Pos: [ 8.12389811 66.61805318]Time: 283.5633680820465
+n_iterations: 260
+exploration: 23
+samplePoints: 522
+no_startingPoints: 20
+
+Min: [0.5531923]Pos: [0.35313028 0.08799243]Time: 52.19751811027527
+n_iterations: 120
+exploration: 9
+samplePoints: 407
+no_startingPoints: 24
+
+Min: [9.15090702]Pos: [ 3.37350065 11.19295926]Time: 400.62425994873047
+n_iterations: 245
+exploration: 13
+samplePoints: 544
+no_startingPoints: 73
+
+Min: [13.94619276]Pos: [ 0.57660401 -0.03856594]Time: 295.21428298950195
+n_iterations: 141
+exploration: 47
+samplePoints: 914
+no_startingPoints: 98
+
+Min: [38.37110922]Pos: [ 4.95513481 24.07662192]Time: 138.13960766792297
+n_iterations: 203
+exploration: 65
+samplePoints: 287
+no_startingPoints: 57
+
+Min: [7.50886214]Pos: [2.78621636 7.97080664]Time: 54.81967759132385
+n_iterations: 92
+exploration: 2
+samplePoints: 864
+no_startingPoints: 21
+
+Min: [61.69124909]Pos: [ 8.83265336 77.95738809]Time: 606.3768374919891
+n_iterations: 282
+exploration: 57
+samplePoints: 802
+no_startingPoints: 37
+
+Min: [1456.59647718]Pos: [ 7.08036922 53.89942017]Time: 52.61741065979004
+n_iterations: 112
+exploration: 23
+samplePoints: 402
+no_startingPoints: 36
+
+Min: [43.95541331]Pos: [ 6.67527578 44.90204068]Time: 254.70146775245667
+n_iterations: 209
+exploration: 12
+samplePoints: 712
+no_startingPoints: 28
+
+Min: [32.16895007]Pos: [ 6.54093096 42.66265664]Time: 59.75077271461487
+n_iterations: 146
+exploration: 74
+samplePoints: 227
+no_startingPoints: 47
+
+Min: [46.94682745]Pos: [ 7.50522865 56.11330991]Time: 134.33979773521423
+n_iterations: 129
+exploration: 2
+samplePoints: 510
+no_startingPoints: 86
+
+Min: [1178.9901374]Pos: [2.8706413  4.81203829]Time: 22.86390733718872
+n_iterations: 54
+exploration: 93
+samplePoints: 209
+no_startingPoints: 97
+
+Min: [18.95508243]Pos: [ 4.38624226 19.51277145]Time: 54.76247572898865
+n_iterations: 108
+exploration: 68
+samplePoints: 523
+no_startingPoints: 28
+
+Min: [6326.3063593]Pos: [ 0.42031511 -7.77693209]Time: 49.207725524902344
+n_iterations: 55
+exploration: 95
+samplePoints: 982
+no_startingPoints: 63
+
+Min: [31.31673682]Pos: [-2.73488112  7.89631687]Time: 169.9377303123474
+n_iterations: 153
+exploration: 74
+samplePoints: 638
+no_startingPoints: 59
+
+Min: [27.77871958]Pos: [-4.26785018 18.2314194 ]Time: 95.72733235359192
+n_iterations: 188
+exploration: 54
+samplePoints: 264
+no_startingPoints: 34
+
+Min: [3.08536044]Pos: [1.04967652 0.92623912]Time: 298.471538066864
+n_iterations: 197
+exploration: 61
+samplePoints: 762
+no_startingPoints: 53
+
+Min: [17.07333936]Pos: [-1.77894318  3.47042986]Time: 937.9078507423401
+n_iterations: 256
+exploration: 47
+samplePoints: 960
+no_startingPoints: 97
+
+Min: [19.18784159]Pos: [0.84852651 0.28221993]Time: 448.4962763786316
+n_iterations: 237
+exploration: 16
+samplePoints: 722
+no_startingPoints: 64
+
+Min: [5.00118116]Pos: [2.60964102 6.65497687]Time: 83.8466591835022
+n_iterations: 103
+exploration: 73
+samplePoints: 846
+no_startingPoints: 37
+
+Min: [7.59850612]Pos: [1.43567532 2.33335278]Time: 24.871775150299072
+n_iterations: 55
+exploration: 17
+samplePoints: 306
+no_startingPoints: 81
+
+Min: [38.5350586]Pos: [ 5.89268873 34.34172473]Time: 448.921986579895
+n_iterations: 258
+exploration: 74
+samplePoints: 736
+no_startingPoints: 40
+
+Min: [302.09035733]Pos: [ 8.92960771 78.19124694]Time: 47.58775448799133
+n_iterations: 131
+exploration: 34
+samplePoints: 278
+no_startingPoints: 23
+
+Min: [24.43977424]Pos: [-0.85657783  0.27554556]Time: 576.1839401721954
+n_iterations: 298
+exploration: 42
+samplePoints: 659
+no_startingPoints: 36
+
+Min: [10.23316119]Pos: [-1.25559347  1.803351  ]Time: 380.7925777435303
+n_iterations: 299
+exploration: 35
+samplePoints: 498
+no_startingPoints: 19
+
+Min: [18.8648652]Pos: [ 0.0941933  -0.41591438]Time: 104.64824795722961
+n_iterations: 89
+exploration: 59
+samplePoints: 677
+no_startingPoints: 92
+
+Min: [4.28143643]Pos: [2.73561376 7.59623613]Time: 14.096506595611572
+n_iterations: 53
+exploration: 34
+samplePoints: 396
+no_startingPoints: 14
+
+Min: [37.89612241]Pos: [2.09839526 3.79754283]Time: 134.90303349494934
+n_iterations: 141
+exploration: 26
+samplePoints: 912
+no_startingPoints: 22
+
+Min: [51.39836561]Pos: [-4.88256316 24.24922558]Time: 19.00322961807251
+n_iterations: 56
+exploration: 97
+samplePoints: 226
+no_startingPoints: 74
+
+Min: [0.49423504]Pos: [0.57420381 0.27376963]Time: 243.3673176765442
+n_iterations: 299
+exploration: 3
+samplePoints: 261
+no_startingPoints: 34
+
+Min: [386.41513403]Pos: [-5.67539943 34.05908854]Time: 42.06509518623352
+n_iterations: 83
+exploration: 6
+samplePoints: 629
+no_startingPoints: 32
+
+Min: [26.37104172]Pos: [-4.01395276 16.00085193]Time: 485.65181732177734
+n_iterations: 296
+exploration: 16
+samplePoints: 650
+no_startingPoints: 22
+
+Min: [16.28285385]Pos: [ 4.71153831 22.35693902]Time: 178.32430219650269
+n_iterations: 235
+exploration: 80
+samplePoints: 312
+no_startingPoints: 46
+
+Min: [3079.30329339]Pos: [ 2.0700763 -1.2628993]Time: 30.728098154067993
+n_iterations: 77
+exploration: 77
+samplePoints: 323
+no_startingPoints: 56
+
+Min: [81.13860213]Pos: [-0.71067651  1.38943765]Time: 48.98727869987488
+n_iterations: 101
+exploration: 32
+samplePoints: 669
+no_startingPoints: 15
+
+Min: [795.54299139]Pos: [-9.36328928 85.04793385]Time: 58.04656648635864
+n_iterations: 89
+exploration: 51
+samplePoints: 458
+no_startingPoints: 70
+
+Min: [2.26209703]Pos: [2.34060822 5.4102657 ]Time: 610.7066738605499
+n_iterations: 270
+exploration: 64
+samplePoints: 989
+no_startingPoints: 30
+
+Min: [38.41301197]Pos: [-2.95504343  8.25509574]Time: 500.92989921569824
+n_iterations: 288
+exploration: 60
+samplePoints: 516
+no_startingPoints: 58
+
+Min: [3.5390069]Pos: [0.70953063 0.68930018]Time: 462.8457124233246
+n_iterations: 293
+exploration: 8
+samplePoints: 433
+no_startingPoints: 63
+
+Min: [25.27773637]Pos: [ 5.84654335 34.31581349]Time: 1071.835932970047
+n_iterations: 279
+exploration: 34
+samplePoints: 993
+no_startingPoints: 83
+
+Min: [170.73186109]Pos: [ 6.94718512 47.09992564]Time: 31.7099392414093
+n_iterations: 71
+exploration: 43
+samplePoints: 817
+no_startingPoints: 22
+
+Min: [405.64882241]Pos: [-6.24259847 37.09069116]Time: 165.3550624847412
+n_iterations: 144
+exploration: 43
+samplePoints: 874
+no_startingPoints: 40
+
+Min: [6.47001481]Pos: [2.8719282  8.42018948]Time: 172.8488166332245
+n_iterations: 175
+exploration: 39
+samplePoints: 382
+no_startingPoints: 88
+
+Min: [83.59354423]Pos: [ 9.73142568 94.42943091]Time: 154.8847451210022
+n_iterations: 152
+exploration: 37
+samplePoints: 946
+no_startingPoints: 17
+
+Min: [7.26310292]Pos: [3.11620471 9.87760838]Time: 58.87983989715576
+n_iterations: 130
+exploration: 94
+samplePoints: 268
+no_startingPoints: 52
+
+Min: [0.54681813]Pos: [0.30569638 0.11889839]Time: 172.98719763755798
+n_iterations: 141
+exploration: 39
+samplePoints: 510
+no_startingPoints: 98
+
+Min: [88.51691715]Pos: [-8.32667739 69.20986302]Time: 48.510327100753784
+n_iterations: 104
+exploration: 22
+samplePoints: 207
+no_startingPoints: 83
+
+Min: [3.62084232]Pos: [-0.85781743  0.77700372]Time: 192.18663668632507
+n_iterations: 237
+exploration: 95
+samplePoints: 336
+no_startingPoints: 45
+
+Min: [30.24317424]Pos: [ 6.38371204 40.86397648]Time: 182.7885217666626
+n_iterations: 142
+exploration: 53
+samplePoints: 820
+no_startingPoints: 57
+
+Min: [33.63385348]Pos: [ 5.22628277 26.91688698]Time: 290.4132025241852
+n_iterations: 243
+exploration: 44
+samplePoints: 460
+no_startingPoints: 56
+
+Min: [480.8296534]Pos: [3.43382365 9.61191067]Time: 113.8551857471466
+n_iterations: 77
+exploration: 7
+samplePoints: 911
+no_startingPoints: 93
+
+Min: [12.65911747]Pos: [-2.28647485  5.36428306]Time: 25.7955060005188
+n_iterations: 78
+exploration: 7
+samplePoints: 367
+no_startingPoints: 35
+
+Min: [480.77259175]Pos: [-6.86612585 49.19038067]Time: 108.49581789970398
+n_iterations: 162
+exploration: 87
+samplePoints: 341
+no_startingPoints: 58
+
+Min: [64.99033549]Pos: [-0.43662934  0.983907  ]Time: 36.35403823852539
+n_iterations: 77
+exploration: 96
+samplePoints: 325
+no_startingPoints: 70
+
+Min: [7.89732756]Pos: [ 3.80671927 14.47709212]Time: 151.84610319137573
+n_iterations: 190
+exploration: 6
+samplePoints: 516
+no_startingPoints: 23
+
+Min: [24.47191528]Pos: [-2.30497653  4.94482652]Time: 125.65010976791382
+n_iterations: 182
+exploration: 27
+samplePoints: 529
+no_startingPoints: 13
+
+Min: [16.3067145]Pos: [-0.80302245  0.28351661]Time: 295.1203422546387
+n_iterations: 259
+exploration: 89
+samplePoints: 501
+no_startingPoints: 31
+
+Min: [6.74995106]Pos: [-0.73795321  0.73769329]Time: 1023.1016039848328
+n_iterations: 289
+exploration: 42
+samplePoints: 847
+no_startingPoints: 88
+
+Min: [28.19163901]Pos: [ 4.32799535 18.31782787]Time: 376.3661024570465
+n_iterations: 238
+exploration: 33
+samplePoints: 472
+no_startingPoints: 89
+
+Min: [52.92394827]Pos: [1.74997872 2.33881321]Time: 27.9140567779541
+n_iterations: 62
+exploration: 0
+samplePoints: 863
+no_startingPoints: 20
+
+Min: [42.84701385]Pos: [-5.04397833 25.1903742 ]Time: 536.5060865879059
+n_iterations: 277
+exploration: 5
+samplePoints: 932
+no_startingPoints: 14
+
+Min: [3.23627507]Pos: [-0.55696744  0.22009461]Time: 398.46596574783325
+n_iterations: 274
+exploration: 22
+samplePoints: 489
+no_startingPoints: 51
+
+Min: [26.19683188]Pos: [ 5.82747691 33.78941956]Time: 171.23584985733032
+n_iterations: 201
+exploration: 91
+samplePoints: 268
+no_startingPoints: 97
+
+Min: [46.14015709]Pos: [ 3.4705088  11.41168542]Time: 83.38608002662659
+n_iterations: 109
+exploration: 37
+samplePoints: 749
+no_startingPoints: 35
+
+Min: [68.40140508]Pos: [-5.17053274 27.28509869]Time: 65.18156170845032
+n_iterations: 105
+exploration: 72
+samplePoints: 446
+no_startingPoints: 58
+
+Min: [31.75401714]Pos: [-4.42302746 19.41004485]Time: 130.1313443183899
+n_iterations: 137
+exploration: 97
+samplePoints: 416
+no_startingPoints: 92
+
+Min: [22.3147678]Pos: [-3.42796827 11.58641058]Time: 143.11722087860107
+n_iterations: 193
+exploration: 27
+samplePoints: 405
+no_startingPoints: 34
+
+Min: [1.62507739]Pos: [ 0.05951982 -0.08251402]Time: 312.4523997306824
+n_iterations: 228
+exploration: 97
+samplePoints: 816
+no_startingPoints: 14
+
+Min: [9.21067914]Pos: [-1.56639561  2.29159853]Time: 39.69535040855408
+n_iterations: 91
+exploration: 36
+samplePoints: 517
+no_startingPoints: 27
+
+Min: [9.50615828]Pos: [-0.26432577 -0.21133713]Time: 103.650963306427
+n_iterations: 116
+exploration: 52
+samplePoints: 615
+no_startingPoints: 61
+
+Min: [481.92465427]Pos: [ 8.07165694 67.22990539]Time: 32.272122621536255
+n_iterations: 52
+exploration: 65
+samplePoints: 742
+no_startingPoints: 57
+
+Min: [55.25615347]Pos: [ 5.64430154 31.27773811]Time: 292.1816449165344
+n_iterations: 191
+exploration: 1
+samplePoints: 806
+no_startingPoints: 51
+
+Min: [25.0333017]Pos: [2.45417719 5.54425122]Time: 363.29044818878174
+n_iterations: 264
+exploration: 15
+samplePoints: 613
+no_startingPoints: 27
+
+Min: [30.37325919]Pos: [2.8185243  8.46433139]Time: 318.2229790687561
+n_iterations: 166
+exploration: 8
+samplePoints: 971
+no_startingPoints: 70
+
+Min: [30.10053447]Pos: [-3.91654519 15.58280348]Time: 29.096096754074097
+n_iterations: 69
+exploration: 56
+samplePoints: 532
+no_startingPoints: 40
+
+Min: [29.92247688]Pos: [ 5.04753528 25.10964588]Time: 70.31641459465027
+n_iterations: 179
+exploration: 78
+samplePoints: 240
+no_startingPoints: 22
+
+Min: [3.58568737]Pos: [-0.88569999  0.76719516]Time: 626.4056289196014
+n_iterations: 296
+exploration: 64
+samplePoints: 819
+no_startingPoints: 24
+
+Min: [14.54462355]Pos: [-2.74534024  7.46498686]Time: 417.2216122150421
+n_iterations: 235
+exploration: 38
+samplePoints: 636
+no_startingPoints: 72
+
+Min: [18.51621348]Pos: [ 3.47801374 12.44837015]Time: 360.60238242149353
+n_iterations: 191
+exploration: 36
+samplePoints: 696
+no_startingPoints: 92
+
+Min: [116.75101858]Pos: [-9.73312766 94.60923543]Time: 39.8198447227478
+n_iterations: 79
+exploration: 95
+samplePoints: 988
+no_startingPoints: 14
+
+Min: [17.23093684]Pos: [0.95793018 1.33271055]Time: 163.3307032585144
+n_iterations: 148
+exploration: 90
+samplePoints: 471
+no_startingPoints: 92
+
+Min: [857.93438303]Pos: [ 8.89679418 76.33235272]Time: 28.339760541915894
+n_iterations: 75
+exploration: 98
+samplePoints: 254
+no_startingPoints: 66
+
+Min: [113.47104106]Pos: [-9.40686785 88.26182723]Time: 130.10610342025757
+n_iterations: 150
+exploration: 23
+samplePoints: 345
+no_startingPoints: 93
+
+Min: [6.63127933]Pos: [-0.16669011 -0.20178168]Time: 442.545779466629
+n_iterations: 248
+exploration: 38
+samplePoints: 549
+no_startingPoints: 78
+
+Min: [81.97847792]Pos: [-0.53309349 -0.60815713]Time: 261.5366325378418
+n_iterations: 175
+exploration: 26
+samplePoints: 716
+no_startingPoints: 70
+
+Min: [8.48808166]Pos: [ 3.71671461 13.70872759]Time: 506.0453791618347
+n_iterations: 261
+exploration: 12
+samplePoints: 865
+no_startingPoints: 31
+
+Min: [21.62942124]Pos: [-3.45697474 12.08352002]Time: 70.5118157863617
+n_iterations: 106
+exploration: 1
+samplePoints: 793
+no_startingPoints: 22
+
+Min: [12.87805428]Pos: [-1.33221254  2.04753261]Time: 146.04143261909485
+n_iterations: 157
+exploration: 71
+samplePoints: 746
+no_startingPoints: 24
+
+Min: [90.46695511]Pos: [ 9.12626615 83.78300867]Time: 430.9821925163269
+n_iterations: 207
+exploration: 1
+samplePoints: 899
+no_startingPoints: 67
+
+Min: [29.94296509]Pos: [ 6.47051446 41.85473689]Time: 65.32566213607788
+n_iterations: 54
+exploration: 5
+samplePoints: 905
+no_startingPoints: 88
+
+Min: [42.87040027]Pos: [ 7.44693319 55.57115782]Time: 64.38876795768738
+n_iterations: 103
+exploration: 20
+samplePoints: 319
+no_startingPoints: 85
+
+Min: [18.24630917]Pos: [-0.16490141  0.43815858]Time: 270.3312032222748
+n_iterations: 172
+exploration: 24
+samplePoints: 784
+no_startingPoints: 69
+
+Min: [1.80441872]Pos: [-0.16776462  0.09453356]Time: 704.2821662425995
+n_iterations: 286
+exploration: 50
+samplePoints: 677
+no_startingPoints: 70
+
+Min: [39.4392766]Pos: [ 5.99956096 35.61468342]Time: 1007.9628562927246
+n_iterations: 292
+exploration: 73
+samplePoints: 883
+no_startingPoints: 78
+
+Min: [382.97277938]Pos: [ 4.6505832  19.70530607]Time: 235.65315580368042
+n_iterations: 139
+exploration: 67
+samplePoints: 928
+no_startingPoints: 75
+
+Min: [38.43222139]Pos: [-5.07064877 25.83715487]Time: 209.48332524299622
+n_iterations: 122
+exploration: 42
+samplePoints: 903
+no_startingPoints: 89
+
+Min: [3864.7729046]Pos: [ 1.02128284 -5.17371077]Time: 46.43557000160217
+n_iterations: 54
+exploration: 72
+samplePoints: 560
+no_startingPoints: 92
+
+Min: [4.59133053]Pos: [3.12378235 9.78645539]Time: 212.38718104362488
+n_iterations: 178
+exploration: 59
+samplePoints: 973
+no_startingPoints: 14
+
+Min: [0.73739634]Pos: [0.24874401 0.10346815]Time: 864.835107088089
+n_iterations: 293
+exploration: 49
+samplePoints: 618
+no_startingPoints: 99
+
+Min: [0.50792193]Pos: [1.4047036  2.03185538]Time: 177.02213764190674
+n_iterations: 212
+exploration: 66
+samplePoints: 504
+no_startingPoints: 21
+
+Min: [26.68024975]Pos: [ 4.20022501 18.04733814]Time: 98.812255859375
+n_iterations: 179
+exploration: 79
+samplePoints: 205
+no_startingPoints: 78
+
+Min: [4.85423551]Pos: [-1.02004775  0.95254045]Time: 104.8209400177002
+n_iterations: 123
+exploration: 86
+samplePoints: 659
+no_startingPoints: 47
+
+Min: [12.07259884]Pos: [-0.6642661   0.13624426]Time: 90.74034094810486
+n_iterations: 79
+exploration: 1
+samplePoints: 734
+no_startingPoints: 87
+
+Min: [60.5575167]Pos: [-6.41745133 40.94833219]Time: 349.71929597854614
+n_iterations: 183
+exploration: 58
+samplePoints: 926
+no_startingPoints: 66
+
+Min: [10986.22783936]Pos: [ 7.81423593 50.60293618]Time: 64.80962681770325
+n_iterations: 64
+exploration: 23
+samplePoints: 871
+no_startingPoints: 73
+
+Min: [94.36233493]Pos: [-8.6728041  75.12813328]Time: 69.18338012695312
+n_iterations: 130
+exploration: 95
+samplePoints: 216
+no_startingPoints: 84
+
+Min: [169.37411227]Pos: [-3.24975087 11.7909772 ]Time: 43.33563947677612
+n_iterations: 53
+exploration: 99
+samplePoints: 919
+no_startingPoints: 63
+
+Min: [0.28309707]Pos: [1.02845348 1.11084728]Time: 381.43288707733154
+n_iterations: 255
+exploration: 1
+samplePoints: 432
+no_startingPoints: 81
+
+Min: [20.60522299]Pos: [ 5.07938483 25.99924429]Time: 262.54025959968567
+n_iterations: 193
+exploration: 67
+samplePoints: 638
+no_startingPoints: 62
+
+Min: [11.61508317]Pos: [-0.33501183  0.42580631]Time: 376.22842144966125
+n_iterations: 297
+exploration: 4
+samplePoints: 464
+no_startingPoints: 28
+
+Min: [58.8487263]Pos: [ 0.81929304 -0.09567529]Time: 137.2868893146515
+n_iterations: 109
+exploration: 89
+samplePoints: 856
+no_startingPoints: 68
+
+Min: [21.72385836]Pos: [0.82529987 0.21535879]Time: 24.940240383148193
+n_iterations: 55
+exploration: 42
+samplePoints: 858
+no_startingPoints: 18
+
+Min: [74.12874637]Pos: [ 6.76420982 46.39408613]Time: 39.06106948852539
+n_iterations: 64
+exploration: 45
+samplePoints: 565
+no_startingPoints: 64
+
+Min: [33.71337011]Pos: [ 6.68399493 44.55723147]Time: 171.25611901283264
+n_iterations: 167
+exploration: 63
+samplePoints: 501
+no_startingPoints: 70
+
+Min: [7.18126357]Pos: [1.72294028 2.71048016]Time: 45.28033995628357
+n_iterations: 109
+exploration: 59
+samplePoints: 285
+no_startingPoints: 50
+
+Min: [14.25725018]Pos: [-2.73174152  7.40484824]Time: 168.3469364643097
+n_iterations: 256
+exploration: 67
+samplePoints: 228
+no_startingPoints: 52
+
+Min: [12255.02234975]Pos: [ 8.73901133 87.41347522]Time: 62.75981044769287
+n_iterations: 93
+exploration: 58
+samplePoints: 870
+no_startingPoints: 28
+
+Min: [31.79831785]Pos: [ 4.54923223 21.13370638]Time: 94.24923849105835
+n_iterations: 100
+exploration: 9
+samplePoints: 610
+no_startingPoints: 75
+
+Min: [8.29389882]Pos: [0.59602167 0.07009801]Time: 201.16903734207153
+n_iterations: 129
+exploration: 78
+samplePoints: 766
+no_startingPoints: 92
+
+Min: [64.17361304]Pos: [1.53309113 1.55105981]Time: 215.47392511367798
+n_iterations: 202
+exploration: 37
+samplePoints: 646
+no_startingPoints: 27
+
+Min: [5.39360577]Pos: [-1.14249184  1.21565868]Time: 315.9983549118042
+n_iterations: 286
+exploration: 0
+samplePoints: 401
+no_startingPoints: 35
+
+Min: [1.55970064]Pos: [1.53658674 2.2483258 ]Time: 88.51082348823547
+n_iterations: 79
+exploration: 92
+samplePoints: 963
+no_startingPoints: 66
+
+Min: [2.18195806]Pos: [0.3910022  0.01830636]Time: 230.29131150245667
+n_iterations: 230
+exploration: 24
+samplePoints: 465
+no_startingPoints: 38
+
+Min: [719.81752829]Pos: [ 9.86531336 94.79216814]Time: 106.72228574752808
+n_iterations: 126
+exploration: 50
+samplePoints: 824
+no_startingPoints: 28
+
+Min: [5.70574542]Pos: [1.90408624 3.84664108]Time: 64.1385006904602
+n_iterations: 137
+exploration: 9
+samplePoints: 236
+no_startingPoints: 62
+
+Min: [171.60055063]Pos: [-1.07071731 -0.14705848]Time: 218.58916115760803
+n_iterations: 175
+exploration: 97
+samplePoints: 632
+no_startingPoints: 61
+
+Min: [83.70197103]Pos: [ 7.68949751 58.50425187]Time: 19.342806339263916
+n_iterations: 63
+exploration: 71
+samplePoints: 248
+no_startingPoints: 44
+
+Min: [25.49259395]Pos: [ 4.50629306 20.66997461]Time: 130.3934075832367
+n_iterations: 203
+exploration: 19
+samplePoints: 253
+no_startingPoints: 63
+
+Min: [9.09340403]Pos: [-0.96369141  1.15755305]Time: 390.9930603504181
+n_iterations: 271
+exploration: 27
+samplePoints: 366
+no_startingPoints: 87
+
+Min: [24.29602336]Pos: [-3.60552807 12.82418717]Time: 63.03616809844971
+n_iterations: 68
+exploration: 25
+samplePoints: 774
+no_startingPoints: 72
+
+Min: [38.85985818]Pos: [-4.71688532 22.00046981]Time: 14.948853492736816
+n_iterations: 56
+exploration: 82
+samplePoints: 397
+no_startingPoints: 26
+
+Min: [48.58492587]Pos: [ 7.53727958 57.05242847]Time: 69.89113283157349
+n_iterations: 105
+exploration: 72
+samplePoints: 659
+no_startingPoints: 37
+
+Min: [22432.97124223]Pos: [ -0.70470527 -14.48006075]Time: 79.08235836029053
+n_iterations: 119
+exploration: 93
+samplePoints: 834
+no_startingPoints: 12
+
+Min: [37.553534]Pos: [ 5.63400516 31.34102127]Time: 130.55599284172058
+n_iterations: 145
+exploration: 61
+samplePoints: 564
+no_startingPoints: 53
+
+Min: [11.70267653]Pos: [-1.83486651  3.55820858]Time: 94.8765938282013
+n_iterations: 99
+exploration: 45
+samplePoints: 932
+no_startingPoints: 46
+
+Min: [21.23727681]Pos: [ 4.48599366 19.82272375]Time: 256.1360161304474
+n_iterations: 181
+exploration: 19
+samplePoints: 657
+no_startingPoints: 71
+
+Min: [6.61145562]Pos: [-0.98280032  1.12960225]Time: 46.84954500198364
+n_iterations: 88
+exploration: 96
+samplePoints: 505
+no_startingPoints: 47
+
+Min: [0.25411198]Pos: [1.08727384 1.2318127 ]Time: 353.2001123428345
+n_iterations: 249
+exploration: 81
+samplePoints: 511
+no_startingPoints: 62
+
+Min: [37.44986439]Pos: [ 6.4477022  41.29407338]Time: 170.40397191047668
+n_iterations: 142
+exploration: 75
+samplePoints: 662
+no_startingPoints: 70
+
+Min: [20.34436151]Pos: [-3.43694866 11.73150825]Time: 69.20084357261658
+n_iterations: 89
+exploration: 50
+samplePoints: 602
+no_startingPoints: 64
+
+Min: [96.85835903]Pos: [-8.84136223 78.16197355]Time: 404.8301627635956
+n_iterations: 274
+exploration: 56
+samplePoints: 601
+no_startingPoints: 34
+
+Min: [6.25552636]Pos: [2.71975925 7.21548769]Time: 76.1919252872467
+n_iterations: 105
+exploration: 73
+samplePoints: 350
+no_startingPoints: 94
+
+Min: [71.77495229]Pos: [-7.18810111 51.88628209]Time: 193.52238011360168
+n_iterations: 244
+exploration: 70
+samplePoints: 268
+no_startingPoints: 66
+
+Min: [0.54074535]Pos: [0.28347881 0.0638246 ]Time: 516.8803565502167
+n_iterations: 283
+exploration: 0
+samplePoints: 644
+no_startingPoints: 43
+
+Min: [5.72171193]Pos: [-1.22306631  1.40759124]Time: 735.3306350708008
+n_iterations: 295
+exploration: 42
+samplePoints: 921
+no_startingPoints: 34
+
+Min: [23.50930649]Pos: [-3.82351976 14.66859473]Time: 192.24380469322205
+n_iterations: 156
+exploration: 36
+samplePoints: 926
+no_startingPoints: 34
+
+Min: [0.56418242]Pos: [0.45534979 0.25906757]Time: 114.40293312072754
+n_iterations: 164
+exploration: 2
+samplePoints: 310
+no_startingPoints: 74
+
+Min: [4.99689895]Pos: [1.44715698 1.87524392]Time: 263.5580995082855
+n_iterations: 170
+exploration: 99
+samplePoints: 689
+no_startingPoints: 81
+
+Min: [20.19100559]Pos: [2.98278575 9.30024235]Time: 45.35715055465698
+n_iterations: 141
+exploration: 82
+samplePoints: 254
+no_startingPoints: 18
+
+Min: [40.51992868]Pos: [ 6.96774474 48.3279729 ]Time: 381.60995388031006
+n_iterations: 212
+exploration: 66
+samplePoints: 656
+no_startingPoints: 84
+
+Min: [152.74500928]Pos: [-8.41583215 71.62677502]Time: 243.63691639900208
+n_iterations: 175
+exploration: 79
+samplePoints: 959
+no_startingPoints: 32
+
+Min: [9.4128247]Pos: [0.25747593 0.36397628]Time: 214.0714292526245
+n_iterations: 208
+exploration: 13
+samplePoints: 392
+no_startingPoints: 75
+
+Min: [19.86868903]Pos: [ 0.58451963 -0.1021393 ]Time: 59.016278982162476
+n_iterations: 86
+exploration: 53
+samplePoints: 671
+no_startingPoints: 49
+
+Min: [24.84066163]Pos: [1.96832671 3.38540303]Time: 664.0079619884491
+n_iterations: 236
+exploration: 4
+samplePoints: 976
+no_startingPoints: 75
+
+Min: [10.99799982]Pos: [3.18113476 9.86980539]Time: 143.0756504535675
+n_iterations: 106
+exploration: 53
+samplePoints: 952
+no_startingPoints: 66
+
+Min: [2.26145613]Pos: [-0.4904489   0.22053558]Time: 1000.916113615036
+n_iterations: 263
+exploration: 5
+samplePoints: 969
+no_startingPoints: 97
+
+Min: [22.21561071]Pos: [ 5.21623548 27.41980118]Time: 171.7920525074005
+n_iterations: 181
+exploration: 18
+samplePoints: 732
+no_startingPoints: 15
+
+Min: [0.38042805]Pos: [0.67384711 0.40171991]Time: 346.96250343322754
+n_iterations: 241
+exploration: 20
+samplePoints: 390
+no_startingPoints: 97
+
+Min: [42.32168614]Pos: [ 7.38521331 54.66590425]Time: 491.6077628135681
+n_iterations: 265
+exploration: 2
+samplePoints: 557
+no_startingPoints: 73
+
+Min: [5.43857374]Pos: [-1.01259628  1.14316591]Time: 302.7135500907898
+n_iterations: 198
+exploration: 51
+samplePoints: 968
+no_startingPoints: 27
+
+Min: [2.63999991]Pos: [-0.35062164  0.03261272]Time: 559.5739822387695
+n_iterations: 229
+exploration: 61
+samplePoints: 746
+no_startingPoints: 98
+
+Min: [39.62279606]Pos: [-4.72947526 22.62862586]Time: 306.2328565120697
+n_iterations: 197
+exploration: 76
+samplePoints: 697
+no_startingPoints: 66
+
+Min: [2262.64517208]Pos: [-7.0864159  54.90477908]Time: 68.40978598594666
+n_iterations: 97
+exploration: 12
+samplePoints: 755
+no_startingPoints: 36
+
+Min: [0.70187195]Pos: [1.65936051 2.70179408]Time: 122.85597896575928
+n_iterations: 113
+exploration: 3
+samplePoints: 553
+no_startingPoints: 91
+
+Min: [28.82362558]Pos: [1.85959558 3.98804591]Time: 442.77142095565796
+n_iterations: 274
+exploration: 44
+samplePoints: 386
+no_startingPoints: 95
+
+Min: [64.13928105]Pos: [-3.35073228 11.89979367]Time: 80.54994869232178
+n_iterations: 136
+exploration: 57
+samplePoints: 407
+no_startingPoints: 45
+
+Min: [5.4834931]Pos: [-0.00726335 -0.2113453 ]Time: 235.57724118232727
+n_iterations: 269
+exploration: 89
+samplePoints: 295
+no_startingPoints: 41
+
+Min: [0.08477941]Pos: [0.9957603 1.0206524]Time: 708.7876946926117
+n_iterations: 242
+exploration: 97
+samplePoints: 984
+no_startingPoints: 79
+
+Min: [43.35186616]Pos: [2.71908952 6.75786467]Time: 214.32334852218628
+n_iterations: 267
+exploration: 70
+samplePoints: 367
+no_startingPoints: 18
+
+Min: [1.47341711]Pos: [-0.21087817  0.05294968]Time: 479.26459860801697
+n_iterations: 260
+exploration: 88
+samplePoints: 696
+no_startingPoints: 53
+
+Min: [81.97005793]Pos: [ 9.65013076 92.85771675]Time: 145.07174706459045
+n_iterations: 140
+exploration: 37
+samplePoints: 573
+no_startingPoints: 70
+
+Min: [41.88727298]Pos: [ 5.32359222 27.85903443]Time: 35.135655641555786
+n_iterations: 113
+exploration: 7
+samplePoints: 289
+no_startingPoints: 20
+
+Min: [7.26667618]Pos: [ 0.25081117 -0.19604148]Time: 408.3660833835602
+n_iterations: 244
+exploration: 58
+samplePoints: 664
+no_startingPoints: 56
+
+Min: [104.61984357]Pos: [ 9.86260097 96.76026933]Time: 79.57529139518738
+n_iterations: 115
+exploration: 32
+samplePoints: 889
+no_startingPoints: 13
+
+Min: [620.73509171]Pos: [ 4.80094073 25.51132337]Time: 34.52308392524719
+n_iterations: 56
+exploration: 42
+samplePoints: 887
+no_startingPoints: 49
+
+Min: [16.12010118]Pos: [2.0130146  3.66371906]Time: 54.50948238372803
+n_iterations: 119
+exploration: 8
+samplePoints: 291
+no_startingPoints: 54
+
+Min: [10.27979308]Pos: [-1.02048302  1.2903322 ]Time: 441.588604927063
+n_iterations: 260
+exploration: 37
+samplePoints: 805
+no_startingPoints: 24
+
+Min: [42.98507581]Pos: [ 0.11528836 -0.63634204]Time: 514.3375813961029
+n_iterations: 253
+exploration: 46
+samplePoints: 925
+no_startingPoints: 34
+
+Min: [1.27237075]Pos: [1.17483385 1.49167083]Time: 810.3644006252289
+n_iterations: 292
+exploration: 9
+samplePoints: 743
+no_startingPoints: 73
+
+Min: [110.54995784]Pos: [-7.22187105 52.81079003]Time: 68.95007348060608
+n_iterations: 108
+exploration: 1
+samplePoints: 485
+no_startingPoints: 52
+
+Min: [4.59005352]Pos: [3.04444446 9.20458741]Time: 222.49646878242493
+n_iterations: 158
+exploration: 39
+samplePoints: 804
+no_startingPoints: 60
+
+Min: [4.52091407]Pos: [ 0.2251171  -0.14732407]Time: 108.60228729248047
+n_iterations: 122
+exploration: 96
+samplePoints: 975
+no_startingPoints: 19
+
+Min: [95.61564766]Pos: [ 7.55709797 56.38433256]Time: 46.425254583358765
+n_iterations: 51
+exploration: 31
+samplePoints: 547
+no_startingPoints: 99
+
+Min: [38.00435332]Pos: [ 5.84481421 33.78064285]Time: 73.78939199447632
+n_iterations: 138
+exploration: 92
+samplePoints: 273
+no_startingPoints: 64
+
+Min: [30.61596743]Pos: [-1.72655752  3.46247624]Time: 169.23214769363403
+n_iterations: 141
+exploration: 87
+samplePoints: 722
+no_startingPoints: 62
+
+Min: [4.27971043]Pos: [-0.77903676  0.71247946]Time: 25.879907608032227
+n_iterations: 94
+exploration: 99
+samplePoints: 343
+no_startingPoints: 11
+
+Min: [70.95362125]Pos: [ 6.66187242 45.00421726]Time: 192.48102688789368
+n_iterations: 236
+exploration: 33
+samplePoints: 332
+no_startingPoints: 43
+
+Min: [15.78743117]Pos: [-0.64403851  0.77651158]Time: 471.9187641143799
+n_iterations: 214
+exploration: 95
+samplePoints: 532
+no_startingPoints: 72
+
+Min: [39.88789318]Pos: [ 5.88212009 34.99999613]Time: 244.0513460636139
+n_iterations: 214
+exploration: 12
+samplePoints: 265
+no_startingPoints: 38
+
+Min: [90.57946827]Pos: [ 8.75421748 76.08449426]Time: 234.70794034004211
+n_iterations: 175
+exploration: 2
+samplePoints: 345
+no_startingPoints: 44
+
+Min: [0.69949473]Pos: [1.58193367 2.4424435 ]Time: 146.88368725776672
+n_iterations: 106
+exploration: 37
+samplePoints: 354
+no_startingPoints: 79
+
+Min: [11.75888558]Pos: [-0.36786631 -0.17912354]Time: 436.72338342666626
+n_iterations: 189
+exploration: 34
+samplePoints: 411
+no_startingPoints: 90
+
+Min: [230.92207786]Pos: [2.65443678 8.55661368]Time: 79.22779655456543
+n_iterations: 70
+exploration: 99
+samplePoints: 947
+no_startingPoints: 32
+
+Min: [12.45791447]Pos: [-1.77371354  2.92778402]Time: 429.0068941116333
+n_iterations: 234
+exploration: 53
+samplePoints: 368
+no_startingPoints: 68
+
+Min: [1.40614875]Pos: [0.74574898 0.44031818]Time: 334.8733010292053
+n_iterations: 182
+exploration: 45
+samplePoints: 378
+no_startingPoints: 78
+
+Min: [25.92284588]Pos: [ 6.08750007 37.03761   ]Time: 290.71577405929565
+n_iterations: 109
+exploration: 84
+samplePoints: 980
+no_startingPoints: 93
+
+Min: [3.38900366]Pos: [-0.78481168  0.57082383]Time: 285.44479608535767
+n_iterations: 196
+exploration: 41
+samplePoints: 390
+no_startingPoints: 93
+
+Min: [19819.75624379]Pos: [ -0.3117054  -13.98049426]Time: 151.00551509857178
+n_iterations: 91
+exploration: 7
+samplePoints: 834
+no_startingPoints: 41
+
+Min: [31.69766663]Pos: [ 5.62089914 31.91614287]Time: 315.40643072128296
+n_iterations: 161
+exploration: 13
+samplePoints: 613
+no_startingPoints: 21
+
+Min: [28.70023963]Pos: [-2.26048917  5.53489302]Time: 229.71564984321594
+n_iterations: 194
+exploration: 92
+samplePoints: 306
+no_startingPoints: 23
+
