@@ -63,3 +63,25 @@ for i in range(n_iterations):
     # Add sample to previous samples
     XY = np.vstack((XY, XY_next))
     Z = np.vstack((Z, Z_next))
+
+
+"""
+------
+OUTPUT
+------
+
+"""
+#kui kaua l2ks aega
+print("Ending time: " + str(time.time()-start_time))
+
+#lopp-punktid
+index=np.argmin(Z)
+print("Function value: "+ str(Z[index]))
+print("Position: " + str(XY[index]))
+
+#graafik proovitud punktidest
+X_axis=XY[no_startingPoints:,0]
+Y_axis=XY[no_startingPoints:,1]
+ax = plt.axes(projection='3d')
+ax.scatter(X_axis, Y_axis, Z[no_startingPoints:], cmap='viridis', linewidth=0.5)
+plt.show()
