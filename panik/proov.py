@@ -12,11 +12,14 @@ start_time=time.time()
 Hyperhyperparameetrid
 ------------
 """
-n_iterations=100
-exploration=80
-samplePoints=1000
-no_startingPoints=10
 bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
+n_iterations=200
+exploration=100
+samplePoints=500
+no_startingPoints=100
+tavalist=100
+suurem=1000
+
 
 
 #kirjuta funktsioon mida hakata optimiseerima
@@ -56,11 +59,10 @@ def expected_improvement(sample, XY, Z, model, exploration):
         Expected improvements at points "sample".
     '''
     mu, sigma = model.predict(sample, return_std=True)
-    mu_sample = model.predict(XY)
    
     #reshapin sigma ja liidan vaikese arvu, et edasistes arvutustes ei oleks 0-ga jagamist
     sigma = sigma.reshape(-1, 1) + 0.0000000001
-    mu_sample_opt = np.min(mu_sample)
+    mu_sample_opt = np.min(Z)
 
     with np.errstate(divide='warn'):
             imp = mu - mu_sample_opt - exploration
@@ -99,17 +101,45 @@ def propose_location(acquisition, XY, Z, model, boundss, samplePoints):
     min_val = 10000000
     min_x = None
 
-    # Find the best optimum by starting from samplePoints different random points
-    randomPoints=np.random.uniform(boundss[0,0], boundss[0,1], size=(samplePoints, dimensions))
+    if len(Z) > tavalist+no_startingPoints:
+
+        index=np.argmin(Z)
+        xzero=xplus=xmin=XY[index,0]
+        yzero=yplus=ymin=XY[index,1]
+
+        while abs(model.predict(np.array([xplus,yzero]).reshape(1,2))) < (np.min(Z)*suurem) and abs(xplus)<100:
+            xplus=xplus+bounds[0,1]/len(Z)/np.log(len(Z))
+            
+        while abs(model.predict(np.array([xmin,yzero]).reshape(1,2))) < (np.min(Z)*suurem)  and abs(xmin)<100:
+            xmin=xmin-bounds[0,1]/len(Z)/np.log(len(Z))
+            
+        while abs(model.predict(np.array([xzero,yplus]).reshape(1,2))) < (np.min(Z)*suurem)  and abs(yplus)<100:
+            yplus=yplus+bounds[0,1]/len(Z)/np.log(len(Z))
+            
+        while abs(model.predict(np.array([xzero,ymin]).reshape(1,2))) < (np.min(Z)*suurem)  and abs(ymin)<100:
+            ymin=ymin-bounds[0,1]/len(Z)/np.log(len(Z))
+            
+        print(xplus,xmin,yplus,ymin)
+
+        
+
+        # Find the best optimum by starting from samplePoints different random points
+        xrandomPoints=np.random.uniform(xmin, xplus, [samplePoints,1])
+        yrandomPoints=np.random.uniform(ymin, yplus, [samplePoints,1])
+        randomPoints=np.concatenate((xrandomPoints,yrandomPoints),axis=1)
+
+    else:
+    
+        randomPoints=np.random.uniform(boundss[0,0], boundss[0,1], size=(samplePoints, dimensions))
 
     for x0 in randomPoints:
+        
         EI=acquisition(x0.reshape(-1, dimensions), XY, Z, model ,exploration)
         if EI < min_val:
             min_val=EI
             min_x=x0
                 
     return min_x.reshape(1,2)
-
 
 
 for i in range(n_iterations):
@@ -128,6 +158,11 @@ for i in range(n_iterations):
     # Add sample to previous samples
     XY = np.vstack((XY, XY_next))
     Z = np.vstack((Z, Z_next))
+    """
+    if i > tavalist:
+        exploration=exploration*0.9
+        suurem=suurem*0.99
+    """
 
     """
     #Generate plot of surrogate function
