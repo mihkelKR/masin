@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.stats import norm
+import sklearn
 
 
 
@@ -29,7 +30,10 @@ def expected_improvement(sample, XY, Z, model, exploration):
 
     with np.errstate(divide='warn'):
         imp = mu - mu_sample_opt - exploration
-        Z = abs(imp / sigma)
+        Z = imp / sigma
+        
+        Z=sklearn.preprocessing.scale(Z)
+        
         ei = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
         #ei[sigma == 0.0] = 0.0
             
@@ -92,11 +96,9 @@ def propose_location(acquisition, XY, Z, model, bounds, samplePoints, tavalist, 
     EI=acquisition(randomPoints.reshape(len(randomPoints), dimensions), XY, Z, model ,exploration)
     
 
-    for i in range(len(EI)):
-        
-        if EI[i,0] < min_val:
-            min_val=EI[i,0]
-            min_x=np.array([randomPoints[i]])
+    min_index=np.argmin(EI)
+    min_val=EI[min_index,0]
+    min_x=np.array([randomPoints[min_index]])
             
 
     return min_x

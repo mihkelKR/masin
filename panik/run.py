@@ -20,12 +20,12 @@ n_iterations=200
 #exploration coefficient
 exploration=70
 #how many random points the optimiser will try before deciding on the point with best expected improvement
-samplePoints=100000
+samplePoints=10000
 #how many random measurements of the function will be done before calculating expected improvement
 no_startingPoints=100
 #
 tavalist=100
-suurem=1000
+suurem=10000
 
 
 #algpunktide genereerimine

@@ -16,16 +16,16 @@ Hyperhyperparameetrid
 #bounds within which the optimiser is searching for the answer
 bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
 #number of measurements on the function
-n_iterations=300
+n_iterations=200
 #exploration coefficient
 exploration=70
 #how many random points the optimiser will try before deciding on the point with best expected improvement
-samplePoints=100000
+samplePoints=10000
 #how many random measurements of the function will be done before calculating expected improvement
-no_startingPoints=10
+no_startingPoints=100
 #
 tavalist=100
-suurem=1000
+suurem=10000
 
 
 #algpunktide genereerimine
@@ -33,7 +33,7 @@ suurem=1000
 X=np.random.uniform(bounds[0,0], bounds[0,1], [no_startingPoints,1])
 Y=np.random.uniform(bounds[1,0], bounds[1,1], [no_startingPoints,1])
 XY=np.column_stack((X,Y))
-Z=tf.rosenbrock(XY,1,100)
+Z=tf.rosenbrock(XY,8,100)
 
 
 #Mis mudel ja Kernel
@@ -52,7 +52,7 @@ for i in range(n_iterations):
     XY_next = bf.propose_location(bf.expected_improvement, XY, Z, model, bounds, samplePoints, tavalist,suurem, no_startingPoints,exploration)
     
     # Obtain next sample from the objective function
-    Z_next = tf.rosenbrock(XY_next,1,100)
+    Z_next = tf.rosenbrock(XY_next,8,100)
     print(Z_next)
 
     if Z_next>100:
