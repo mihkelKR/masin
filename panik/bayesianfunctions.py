@@ -2,8 +2,10 @@ import numpy as np
 from scipy.stats import norm
 
 
+
 #Expected improvementi arvutamine
 def expected_improvement(sample, XY, Z, model, exploration):
+    
     '''
     Computes the EI at points X based on existing samples XY
     and Z using a Gaussian process surrogate model.
@@ -28,21 +30,18 @@ def expected_improvement(sample, XY, Z, model, exploration):
     with np.errstate(divide='warn'):
         imp = mu - mu_sample_opt - exploration
         Z = abs(imp / sigma)
+        ei = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
+        #ei[sigma == 0.0] = 0.0
+            
 
-        if Z>10:
-            return Z
-
-        else:
-            ei = imp * norm.cdf(Z) + sigma * norm.pdf(Z)
-            #ei[sigma == 0.0] = 0.0
-
-            return ei 
+        return ei 
 
 
 
 #positsiooni arvutamine
 
 def propose_location(acquisition, XY, Z, model, bounds, samplePoints, tavalist, suurem, no_startingPoints,exploration):
+    
     '''
     Proposes the next sampling point by optimizing the acquisition function.
     
@@ -56,8 +55,8 @@ def propose_location(acquisition, XY, Z, model, bounds, samplePoints, tavalist, 
         Location of the acquisition function maximum.
     '''
     dimensions = XY.shape[1]
-    min_val = 10000000
-    min_x = None
+    min_val = 1000000000000000000000000
+    min_x=None
 
     if len(Z) > tavalist+no_startingPoints:
 
@@ -88,13 +87,16 @@ def propose_location(acquisition, XY, Z, model, bounds, samplePoints, tavalist, 
     else:
     
         randomPoints=np.random.uniform(bounds[0,0], bounds[0,1], size=(samplePoints, dimensions))
-
-    for x0 in randomPoints:
         
-        EI=acquisition(x0.reshape(-1, dimensions), XY, Z, model ,exploration)
-        if EI < min_val:
-            min_val=EI
-            min_x=x0
+        
+    EI=acquisition(randomPoints.reshape(len(randomPoints), dimensions), XY, Z, model ,exploration)
+    
+
+    for i in range(len(EI)):
+        
+        if EI[i,0] < min_val:
+            min_val=EI[i,0]
+            min_x=np.array([randomPoints[i]])
             
-                
-    return min_x.reshape(1,2)
+
+    return min_x

@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import bayesianfunctions2 as bf
+import bayesianfunctions as bf
 import testfunctions as tf
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel as C, Matern, RBF
@@ -16,11 +16,11 @@ Hyperhyperparameetrid
 #bounds within which the optimiser is searching for the answer
 bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
 #number of measurements on the function
-n_iterations=400
+n_iterations=200
 #exploration coefficient
 exploration=70
 #how many random points the optimiser will try before deciding on the point with best expected improvement
-samplePoints=500
+samplePoints=100000
 #how many random measurements of the function will be done before calculating expected improvement
 no_startingPoints=100
 #
@@ -63,3 +63,25 @@ for i in range(n_iterations):
     # Add sample to previous samples
     XY = np.vstack((XY, XY_next))
     Z = np.vstack((Z, Z_next))
+
+
+"""
+------
+OUTPUT
+------
+
+"""
+#kui kaua l2ks aega
+print("Ending time: " + str(time.time()-start_time))
+
+#lopp-punktid
+index=np.argmin(Z)
+print("Function value: "+ str(Z[index]))
+print("Position: " + str(XY[index]))
+
+#graafik proovitud punktidest
+X_axis=XY[no_startingPoints:,0]
+Y_axis=XY[no_startingPoints:,1]
+ax = plt.axes(projection='3d')
+ax.scatter(X_axis, Y_axis, Z[no_startingPoints:], cmap='viridis', linewidth=0.5)
+plt.show()

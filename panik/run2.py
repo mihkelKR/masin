@@ -16,13 +16,13 @@ Hyperhyperparameetrid
 #bounds within which the optimiser is searching for the answer
 bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
 #number of measurements on the function
-n_iterations=400
+n_iterations=300
 #exploration coefficient
 exploration=70
 #how many random points the optimiser will try before deciding on the point with best expected improvement
-samplePoints=500
+samplePoints=100000
 #how many random measurements of the function will be done before calculating expected improvement
-no_startingPoints=100
+no_startingPoints=10
 #
 tavalist=100
 suurem=1000
