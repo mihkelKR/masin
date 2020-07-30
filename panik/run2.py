@@ -1,87 +1,87 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import bayesianfunctions2 as bf
-import testfunctions as tf
+import testfunctions as fu
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel as C, Matern, RBF
 import time
 
-start_time=time.time()
 
-"""
--------------
-Hyperhyperparameetrid
-------------
-"""
-#bounds within which the optimiser is searching for the answer
-bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
-#number of measurements on the function
-n_iterations=200
-#exploration coefficient
-exploration=70
-#how many random points the optimiser will try before deciding on the point with best expected improvement
-samplePoints=10000
-#how many random measurements of the function will be done before calculating expected improvement
-no_startingPoints=100
-#
-tavalist=100
-suurem=10000
+def run(evaluateFunction, functionConstants, n_iterations,bounds=np.array([[-100.0, 100.0],[-100.0,100.0]])):
 
+    '''
+    Runs the Bayesian optimiser on any given function in mihkelBayesian.functions
 
-#algpunktide genereerimine
+    Parameters
+    ----------
+    evaluateFunction : string
+        String corresponding to the function name that is being evaluated. 
+    functionConstants: list
+        List with any relevant constants corresponding to evaluateFunction
+    n_iternations : integer
+        How many measurements of the function to reach the minimum.
+    boundaries: numpy array (2 x 2)
+        Boundaries of the searchspace in the form of [[xmin,xmax],[ymin,ymax]]
 
-X=np.random.uniform(bounds[0,0], bounds[0,1], [no_startingPoints,1])
-Y=np.random.uniform(bounds[1,0], bounds[1,1], [no_startingPoints,1])
-XY=np.column_stack((X,Y))
-Z=tf.rosenbrock(XY,8,100)
+    Returns
+    -------
+    min_val: float
+        Smallest evaluation.
+    min_point: numpy array (1 x 2)
+        Point correspoinding to the smallest evaluation
+    '''
 
 
-#Mis mudel ja Kernel
-customKernel=C(1.0) * Matern()
-model = GaussianProcessRegressor(kernel=customKernel)
+    #Exploitation-exploration trade-off parameter
+    exploration=100
+    #Number of random points considered for expected improvement
+    samplepoints=10000
+    #Number of random measurements done before applying Bayesian optimisation
+    no_startingpoints=int(n_iterations/5)
+    #Number of evaluation before applying restricted boundries
+    iterations_before_constraints=int(n_iterations/5*2)
+    #How much larger can boundaries be from minimum point
+    larger=5000
+    #Generating startingpoints
+
+    XY,Z=bf.generate_startingArrays(bounds,no_startingpoints, evaluateFunction, functionConstants)
+
+    #Which Gaussian model
+    customKernel=C(1.0) * Matern()
+    model = GaussianProcessRegressor(kernel=customKernel)
 
 
-for i in range(n_iterations):
-    #print iteration
-    print("Iteration " + str(i) + "/"+str(n_iterations))
+    for i in range(n_iterations-no_startingpoints):
+        #print iteration
+        print("Iteration " + str(i + no_startingpoints) + "/"+str(n_iterations))
 
-    # Update Gaussian process with existing samples
-    model.fit(XY, Z)
+        # Update Gaussian process with existing samples
+        model.fit(XY, Z)
 
-    # Obtain next sampling point from the acquisition function (expected_improvement)
-    XY_next = bf.propose_location(bf.expected_improvement, XY, Z, model, bounds, samplePoints, tavalist,suurem, no_startingPoints,exploration)
-    
-    # Obtain next sample from the objective function
-    Z_next = tf.rosenbrock(XY_next,8,100)
-    print(Z_next)
+        # Obtain next sampling point from the acquisition function (expected_improvement)
+        XY_next = bf.propose_location(bf.expected_improvement, XY, Z, model, bounds, samplepoints, iterations_before_constraints,larger, no_startingpoints,exploration)
+        
+        
+        # Obtain next sample from the objective function
+        Z_next = eval("fu."+evaluateFunction)(XY_next,functionConstants)
+        
+        #Changes kernel for very small values
 
-    if Z_next>100:
-        model = GaussianProcessRegressor(kernel=customKernel)
-    else:
-        model= GaussianProcessRegressor()
-    
-    # Add sample to previous samples
-    XY = np.vstack((XY, XY_next))
-    Z = np.vstack((Z, Z_next))
+        if Z_next>10:
+            model = GaussianProcessRegressor(kernel=customKernel)
+        else:
+            model= GaussianProcessRegressor()
+        
+        # Add sample to previous samples
+        XY = np.vstack((XY, XY_next))
+        Z = np.vstack((Z, Z_next))
 
 
-"""
-------
-OUTPUT
-------
+    minindex=np.argmin(Z)  
+    min_val=Z[minindex]
+    min_point=XY[minindex]  
+    print(min_val,min_point)
 
-"""
-#kui kaua l2ks aega
-print("Ending time: " + str(time.time()-start_time))
+    return min_val, min_point
 
-#lopp-punktid
-index=np.argmin(Z)
-print("Function value: "+ str(Z[index]))
-print("Position: " + str(XY[index]))
 
-#graafik proovitud punktidest
-X_axis=XY[no_startingPoints:,0]
-Y_axis=XY[no_startingPoints:,1]
-ax = plt.axes(projection='3d')
-ax.scatter(X_axis, Y_axis, Z[no_startingPoints:], cmap='viridis', linewidth=0.5)
-plt.show()

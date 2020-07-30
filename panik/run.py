@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import bayesianfunctions as bf
-import testfunctions as tf
+import testfunctions as fu
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel as C, Matern, RBF
 import time
@@ -13,32 +13,31 @@ start_time=time.time()
 Hyperhyperparameetrid
 ------------
 """
-#bounds within which the optimiser is searching for the answer
+#Bounds within which the optimiser is searching for the answer
 bounds = np.array([[-100.0, 100.0],[-100.0,100.0]])
-#number of measurements on the function
-n_iterations=200
-#exploration coefficient
-exploration=70
-#how many random points the optimiser will try before deciding on the point with best expected improvement
+#Number of iterations
+n_iterations=400
+#Exploitation-exploration trade-off parameter
+exploration=100
+#Number of random points considered for expected improvement
 samplePoints=10000
-#how many random measurements of the function will be done before calculating expected improvement
+#Number of random measurements done before applying Bayesian optimisation
 no_startingPoints=100
-#
-tavalist=100
-suurem=10000
-
-
-#algpunktide genereerimine
-
-X=np.random.uniform(bounds[0,0], bounds[0,1], [no_startingPoints,1])
-Y=np.random.uniform(bounds[1,0], bounds[1,1], [no_startingPoints,1])
-XY=np.column_stack((X,Y))
-Z=tf.rosenbrock(XY,1,100)
-
+#Number of evaluation before applying restricted boundries
+tavalist=200
+suurem=5000
 
 #Mis mudel ja Kernel
 customKernel=C(1.0) * Matern()
 model = GaussianProcessRegressor(kernel=customKernel)
+
+a=np.random.randint(8,9)
+b=np.random.randint(80,100)
+
+
+#algpunktide genereerimine
+XY,Z=bf.generate_startingArrays(bounds,no_startingPoints, a, b)
+
 
 
 for i in range(n_iterations):
@@ -50,15 +49,19 @@ for i in range(n_iterations):
 
     # Obtain next sampling point from the acquisition function (expected_improvement)
     XY_next = bf.propose_location(bf.expected_improvement, XY, Z, model, bounds, samplePoints, tavalist,suurem, no_startingPoints,exploration)
-    
+        
     # Obtain next sample from the objective function
-    Z_next = tf.rosenbrock(XY_next,1,100)
+    Z_next = fu.rosenbrock(XY_next,a,b)
     print(Z_next)
+        
+    #Changes kernel for very small values
 
-    if Z_next>100:
+    if Z_next>10:
         model = GaussianProcessRegressor(kernel=customKernel)
     else:
         model= GaussianProcessRegressor()
+
+
     
     # Add sample to previous samples
     XY = np.vstack((XY, XY_next))
